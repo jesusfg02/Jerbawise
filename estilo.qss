@@ -1,0 +1,135 @@
+/* =======================================================
+   JERBA EL SABIO - PURE BLACK & MUSICBEE GREEN
+   Paleta: Negro Puro (#000000), Grises y Verde (#1B7C3D)
+======================================================= */
+
+/* ── BASE Y TIPOGRAFÍA GLOBAL ── */
+* {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    outline: none; 
+}
+
+QMainWindow {
+    /* Fondo principal en negro absoluto */
+    background-color: #000000; 
+}
+
+QWidget {
+    /* Texto global en gris neutro claro */
+    color: #D1D1D1; 
+}
+
+/* ── CONTROLES DE ENTRADA (Input URL) ── */
+QLineEdit {
+    background-color: #080808; /* Apenas un tono sobre el negro para definir la caja */
+    color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1B7C3D; /* El foco utiliza el verde de acento */
+    background-color: #000000;
+}
+
+/* ── BOTONES PRINCIPALES ── */
+QPushButton {
+    background-color: #1B7C3D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #21964A;
+}
+
+QPushButton:pressed {
+    background-color: #145C2D;
+}
+
+QPushButton:disabled {
+    background-color: #111111;
+    color: #444444;
+}
+
+/* ── PESTAÑAS (Tabs) ── */
+QTabWidget::pane {
+    border: 1px solid #1A1A1A;
+    background-color: #000000;
+}
+
+QTabBar::tab {
+    background-color: transparent;
+    color: #666666;
+    padding: 8px 24px;
+    border-bottom: 2px solid transparent;
+}
+
+QTabBar::tab:hover {
+    color: #AAAAAA;
+}
+
+QTabBar::tab:selected {
+    color: #FFFFFF;
+    border-bottom: 2px solid #1B7C3D;
+    font-weight: bold;
+}
+
+/* ── TABLAS Y LISTAS (Biblioteca e Historial) ── */
+QTableWidget {
+    background-color: #000000; /* Fondo de la lista totalmente negro */
+    alternate-background-color: #050505; /* Franja alternativa casi imperceptible para no perder el negro puro */
+    color: #A0A0A0; /* El texto en tonos grises para separar visualmente */
+    border: none;
+    gridline-color: transparent;
+}
+
+QTableWidget::item {
+    padding: 6px 4px;
+    border: none;
+}
+
+QTableWidget::item:selected {
+    background-color: #1B7C3D; /* Fila seleccionada en el verde exacto de MusicBee */
+    color: #FFFFFF;
+}
+
+QHeaderView::section {
+    background-color: #000000;
+    color: #555555; /* Cabeceras en gris oscuro para no robar protagonismo a las canciones */
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 1px solid #1A1A1A;
+    text-align: left;
+}
+
+/* ── BARRAS DE PROGRESO ── */
+QProgressBar {
+    background-color: #111111;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    color: transparent;
+}
+
+QProgressBar::chunk {
+    background-color: #1B7C3D;
+    border-radius: 2px;
+}
+
+/* ── TARJETAS (Panel "Descargando ahora") ── */
+QFrame {
+    background-color: #030303;
+    border: 1px solid #151515;
+    border-radius: 6px;
+}
+
+QWidget#centralwidget QFrame {
+    border: none;
+    background: transparent;
+}
